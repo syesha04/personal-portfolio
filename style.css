@@ -529,3 +529,26 @@ margin-bottom: 0;
       font-size: 14px;
     }
   }
+  .portfolio-section {
+    display: flex;
+    flex-wrap: wrap; /* Items will wrap onto the next line */
+    justify-content: space-between; /* Space items evenly */
+}
+
+.portfolio-item {
+    flex: 1 1 calc(45% - 20px); /* Two items per row */
+    margin: 10px; /* Add margin between items */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional styling */
+}
+
+img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .portfolio-item {
+        flex: 1 1 100%; /* Full width on mobile */
+    }
+}
