@@ -437,3 +437,41 @@ margin-bottom: 0;
       width: 50%; 
     }
   }
+  /* For mobile devices (max width 600px) */
+@media (max-width: 600px) {
+    body {
+      padding: 0 10px; /* Add some padding for readability */
+    }
+  
+    .portfolio-section {
+      flex-direction: column; /* Stack sections vertically on mobile */
+    }
+  
+    .portfolio-item {
+      width: 100%; /* Ensure full width on mobile */
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* For larger screens (min width 601px) */
+  @media (min-width: 601px) {
+    .portfolio-item {
+      width: 45%; /* Two items per row on larger screens */
+      margin: 2.5%;
+    }
+  }
+  .portfolio-section {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap to a new line on smaller screens */
+    justify-content: space-around;
+  }
+  
+  .portfolio-item {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+  
+  @media (min-width: 601px) {
+    .portfolio-item {
+      flex: 1 1 45%; /* Adjust to side-by-side on larger screens */
+    }
+  }
